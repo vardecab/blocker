@@ -1,0 +1,1 @@
+A simple HTML static website to use as custom redirection in [Block Site extension for Chrome](https://chrome.google.com/webstore/detail/block-site-website-blocke/eiimnmioipafcokbfikbljfdeojpcgbh?hl=en).

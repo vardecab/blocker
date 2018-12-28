@@ -28,7 +28,7 @@
             background-color: #373940;
             color: #c9c9c9;
             overflow: hidden;
-            margin-top: 30px;
+            margin-top: 20px;
         }
 
         #logo {
@@ -38,7 +38,7 @@
             background-size: 100%;
             background-image: url('shield.png');
             margin: auto;
-            margin-top: 100px;
+            margin-top: 70px;
             margin-bottom: 25px;
         }
 
@@ -57,7 +57,18 @@
 
         a {text-decoration: none;}
 
-        @media only screen and (max-height: 550px) {#logo {margin-top: 50px;}}
+        @media only screen and (min-height: 301px) and (max-height: 550px) {
+            #logo {margin-top: 50px;}
+            #text {display: none;}
+        }
+
+        @media only screen and (max-height: 300px) {
+            #logo {margin-top: -10px;}
+            #title {display: none;}
+            #text {display: none;}
+        }
+
+        @media only screen and (min-height: 700px) {#logo {margin-top: 125px;}}
 
     </style>
 

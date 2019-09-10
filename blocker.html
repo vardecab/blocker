@@ -84,13 +84,17 @@
     <script>
         window.onload = function time_to_sleep() {
             var today = new Date();
-            if (today.getHours() > 22) {
+            if (today.getHours() >= 22) {
                 console.log("night");
                 document.getElementById("text").innerHTML = "Go to sleep! 😴";
-            } else {
+            } else if (today.getHours() < 6) {
+            console.log("night");
+            document.getElementById("text").innerHTML = "Go to sleep! 😴"; 
+        }
+            else {
                 console.log("day");
                 var texts = [
-                    "Don't stop when you're bored!<br />Stop when you are<span style='text-transform: uppercase; font-weight: 700;'> done</span>. ✅"
+                    "Don't stop when you're bored!<br />Stop when you are<span style='text-transform: uppercase; font-weight: 700;'> done</span>. ✅", "You have better things to do 🙃", "No ⛔", "Are you sure you did everything? 🤔"
                 ];
                 var random_text = texts[Math.floor(Math.random() * texts.length)];
                 document.getElementById('text').innerHTML = random_text;

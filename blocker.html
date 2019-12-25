@@ -23,7 +23,7 @@
             margin: 0;
         }
 
-        #logo {
+        #icon {
             width: 150px;
             height: 150px;
             background-size: 100%;
@@ -75,42 +75,65 @@
 
         /* Larger than Desktop HD */
         @media (min-width: 1600px) {
-            #logo {
+            #icon {
                 margin-top: 20%;
             }
         }
     </style>
-
-    <script>
-        window.onload = function time_to_sleep() {
-            var today = new Date();
-            if (today.getHours() >= 22) {
-                console.log("night");
-                document.getElementById("text").innerHTML = "Go to sleep! 😴";
-            } else if (today.getHours() < 6) {
-            console.log("night");
-            document.getElementById("text").innerHTML = "Go to sleep! 😴"; 
-        }
-            else {
-                console.log("day");
-                var texts = [
-                    "Don't stop when you're bored!<br />Stop when you are<span style='text-transform: uppercase; font-weight: 700;'> done</span>. ✅", "You have better things to do 🙃", "No ⛔", "Are you sure you did everything? 🤔"
-                ];
-                var random_text = texts[Math.floor(Math.random() * texts.length)];
-                document.getElementById('text').innerHTML = random_text;
-            }
-        }
-    </script>
 </head>
 
 <body>
     <div class="page">
         <div class="hero">
-            <div id="logo"></div>
+            <div id="icon"></div>
             <div id="title">This site is currently blocked.</div>
         </div>
         <div id="text"></div>
     </div>
+    <script>
+        window.onload = function time_to_sleep() {
+            var today = new Date();
+            if ((today.getHours() >= 22) || (today.getHours() < 6)) {
+                console.log("Looks like a night."); // debug
+
+                var texts_night = [
+                    "Go to sleep! 😴", 
+                    "It's already very late!",
+                    "What you have to do now, write down and do tomorrow.", 
+                    "You don't have much sleep left...",
+                    "Is it worth it?", 
+                    "Is it really worth it?", 
+                    "You need some rest.", 
+                    "Get some sleep, please."
+                ];
+
+                var random_night_text = texts_night[Math.floor(Math.random() * texts_night.length)];
+
+                var text = document.getElementById("text");
+                text.innerHTML = random_night_text;
+                text.style.color = '#ff3b3b'; // icon matching
+            } else {
+                console.log("Looks like a day."); // debug
+
+                var texts_day = [
+                    "Don't stop when you're bored!<br />Stop when you are<span style='text-transform: uppercase; font-weight: 700;'> done</span> ✅",
+                    "You have better things to do 🙃", 
+                    "No ⛔", 
+                    "Are you sure you did everything? 🤔",
+                    "Finish it now and have some fun time later!",
+                    "You can do it 💪🏼",
+                    "Who, if not you?",
+                    "You're sooo close!",
+                    "Almost there 🎯"
+                ];
+
+                var random_day_text = texts_day[Math.floor(Math.random() * texts_day.length)];
+
+                var text = document.getElementById('text');
+                text.innerHTML = random_day_text;
+            }
+        }
+    </script>
 </body>
 
 </html>

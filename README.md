@@ -10,6 +10,7 @@ You can use it by adding [this URL](https://qubkon.github.io/blocker/blocker.htm
 
 ## Release History
 
+- 0.5: Added new texts. Text at night will be in red.
 - 0.4: Added different text when it's late and now during normal hours text is selected randomly.
 - 0.3: RWD fixes.
 - 0.2: Changed text.

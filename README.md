@@ -13,6 +13,7 @@ That's it 🛡
 
 ## Release History
 
+- 0.6: Background will be light during the day and dark after 21:00.
 -   0.5.2: Added a few new quotes.
 -   0.5.1: RWD fixes for `min-width: 1600px`.
 -   0.5: Added new texts. Text at night will be in red.

@@ -10,13 +10,24 @@
 		<link rel="icon" type="image/png" href="shield.png" />
 
 		<style>
-			@import url("https://fonts.googleapis.com/css?family=Fira+Code:300,400,500,600,700&display=swap");
+			@font-face {
+				/* Fira Code → https://github.com/tonsky/FiraCode */
+				font-family: "Fira Code";
+				src: url("fonts/FiraCode/FiraCode-Regular.woff2");
+			}
+
+			:root {
+				--accent: #E74B3C;
+				--font: "Fira Code", monospace;
+				--light-background: #f3f3f3;
+				--light-background-font: #393939;
+				--dark-background: #393939;
+				--dark-background-font: #c9c9c9;
+			}	
 
 			body {
-				font-family: "Fira Code", monospace;
+				font-family: var(--font);
 				text-align: center;
-				background-color: #373940;
-				color: #c9c9c9;
 				overflow: hidden;
 				height: 100vh;
 				margin: 0;
@@ -97,7 +108,7 @@
 		<script>
 			window.onload = function time_to_sleep() {
 				var today = new Date();
-				if (today.getHours() >= 22 || today.getHours() < 6) {
+				if (today.getHours() >= 21 || today.getHours() < 6) {
 					console.log("Looks like a night."); // debug
 
 					var texts_night = [
@@ -121,7 +132,11 @@
 
 					var text = document.getElementById("text");
 					text.innerHTML = random_night_text;
-					text.style.color = "#ff3b3b"; // icon matching
+					text.style.color = "var(--accent)"; // icon matching
+
+					document.body.style.backgroundColor = "var(--dark-background)";
+					document.body.style.color = "var(--dark-background-font)";
+					
 				} else {
 					console.log("Looks like a day."); // debug
 
@@ -143,6 +158,10 @@
 
 					var text = document.getElementById("text");
 					text.innerHTML = random_day_text;
+
+					document.body.style.backgroundColor = "var(--light-background)";
+					document.body.style.color = "var(--light-background-font)";
+
 				}
 			};
 		</script>

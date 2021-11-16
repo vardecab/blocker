@@ -13,6 +13,7 @@ That's it 🛡
 
 ## Release History
 
+- 0.7.1: Changed accent color.
 - 0.7: Changed font; changed icon; some tweaks for RWD.
 - 0.6: Background will be light during the day and dark after 21:00.
 - 0.5.2: Added a few new quotes.

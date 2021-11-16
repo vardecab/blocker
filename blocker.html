@@ -1,169 +1,180 @@
 <!DOCTYPE html>
 <html>
-	<head>
-		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
 
-		<title>Go away! It's blocked.</title>
+<head>
 
-		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
 
-		<link rel="icon" type="image/png" href="shield.png" />
+	<title>Go away! It's blocked.</title>
 
-		<style>
-			@font-face {
-				/* Fira Code → https://github.com/tonsky/FiraCode */
-				font-family: "Fira Code";
-				src: url("fonts/FiraCode/FiraCode-Regular.woff2");
-			}
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-			:root {
-				--accent: #E74B3C;
-				--font: "Fira Code", monospace;
-				--light-background: #f3f3f3;
-				--light-background-font: #393939;
-				--dark-background: #393939;
-				--dark-background-font: #c9c9c9;
-			}	
+	<link rel="icon" type="image/png" href="wall.png" />
 
-			body {
-				font-family: var(--font);
-				text-align: center;
-				overflow: hidden;
-				height: 100vh;
-				margin: 0;
-			}
+</head>
 
+<body>
+
+	<style>
+		@font-face {
+			/* GT Flexa → https://www.grillitype.com/typeface/gt-flexa */
+			font-family: 'GT Flexa Mono';
+			src: url("fonts/GTFlexa/GT-Flexa-Mono-Regular.woff2");
+			font-display: swap;
+			/* avoid showing invisible text while custom fonts load */
+		}
+
+		:root {
+			--accent: #E74B3C;
+			--font: "GT Flexa Mono", monospace;
+			--light-background: #f3f3f3;
+			--light-background-font: #0D1117;
+			--dark-background: #0D1117;
+			--dark-background-font: #cccccc;
+		}
+
+		body {
+			font-family: var(--font);
+			text-align: center;
+			overflow: hidden;
+			height: 100vh;
+			margin: 0;
+		}
+
+		#page {
+			width: 75%;
+		}
+
+		#icon {
+			width: 150px;
+			height: 150px;
+			background-size: 100%;
+			background-image: url("block.png");
+			margin: auto;
+			margin-bottom: 5%;
+		}
+
+		#title {
+			font-size: 1.7rem;
+			margin-bottom: 5%;
+		}
+
+		#text {
+			font-size: 1.3rem;
+			line-height: 2;
+		}
+
+		/* === RWD === */
+
+		/* Extra small devices (phones, 600px and down) */
+		@media only screen and (max-width: 600px) {
 			#icon {
-				width: 150px;
-				height: 150px;
-				background-size: 100%;
-				background-image: url("shield.png");
-				margin: auto;
+				margin-top: 30%;
+				margin-bottom: 20%;
+			}
+			#title {
+				margin-bottom: 10%;
+			}
+		}
+
+		/* Small devices (portrait tablets and large phones, 600px and up) */
+		@media only screen and (min-width: 600px) {
+			#icon {
+				margin-top: 30%;
+			}
+		}
+
+		/* Medium devices (landscape tablets, 768px and up) */
+		@media only screen and (min-width: 768px) {
+			#icon {
+				margin-top: 30%;
+			}
+		}
+
+		/* Large devices (laptops/desktops, 992px and up) */
+		@media only screen and (min-width: 930px) {
+			#icon {
+				margin-top: 20%;
+			}
+		}
+
+		/* Extra large devices (large laptops and desktops, 1200px and up) */
+		@media only screen and (min-width: 1200px) {
+			#icon {
 				margin-top: 10%;
 			}
+		}
+	</style>
 
-			#title {
-				font-size: 1.7rem;
-				margin-top: 3%;
-			}
-
-			#text {
-				font-size: 1.3rem;
-				line-height: 2;
-				margin-top: 3%;
-			}
-
-			/* Smaller than mobile */
-			@media screen and (min-width: 300px) and (max-width: 450px) {
-			}
-
-			@media (max-width: 340px) {
-			}
-
-			@media (max-height: 350px) {
-				#text {
-					display: none;
-				}
-			}
-
-			@media (max-height: 300px) {
-				#text {
-					display: none;
-				}
-
-				#title {
-					display: none;
-				}
-			}
-
-			/* Larger than phablet (also point when grid becomes active) */
-			@media (min-width: 550px) {
-			}
-
-			/* Larger than tablet */
-			@media (min-width: 750px) {
-			}
-
-			/* Larger than desktop */
-			@media (min-width: 1000px) {
-			}
-
-			/* Computer w/ Full HD screen & MacBook Pro */
-			@media (min-width: 1600px) {
-				#icon {
-					margin-top: 10%;
-				}
-			}
-		</style>
-	</head>
-
-	<body>
-		<div class="page">
-			<div class="hero">
-				<div id="icon"></div>
-				<div id="title">This site is currently blocked.</div>
-			</div>
-			<div id="text"></div>
+	<div class="page">
+		<div class="hero">
+			<div id="icon"></div>
+			<div id="title">This site is currently blocked.</div>
 		</div>
-		<script>
-			window.onload = function time_to_sleep() {
-				var today = new Date();
-				if (today.getHours() >= 21 || today.getHours() < 6) {
-					console.log("Looks like a night."); // debug
+		<div id="text"></div>
+	</div>
 
-					var texts_night = [
-						"Go to sleep! 😴",
-						"It's already very late!",
-						"What you have to do now, write down and do tomorrow.",
-						"You don't have much sleep left...",
-						"Is it worth it?",
-						"Is it really worth it?",
-						"You need some rest.",
-						"Get some sleep, please.",
-						"Having 7-8 hrs of sleep is important.",
-						"Is this really something that can't wait?",
-						"Are you sure you can't do it tomorrow?"
+	<script>
+		window.onload = function time_to_sleep() {
+			var today = new Date();
+			if (today.getHours() >= 21 || today.getHours() < 6) {
+				console.log("Looks like a night 🌙"); // debug
+
+				var texts_night = [
+					"Go to sleep! 😴",
+					"It's already very late!",
+					"What you have to do now, write down and do tomorrow.",
+					"You don't have much sleep left...",
+					"Is it worth it?",
+					"Is it really worth it?",
+					"You need some rest.",
+					"Get some sleep, please.",
+					"Having 7-8 hrs of sleep is important.",
+					"Is this really something that can't wait?",
+					"Are you sure you can't do it tomorrow?"
+				];
+
+				var random_night_text =
+					texts_night[
+						Math.floor(Math.random() * texts_night.length)
 					];
 
-					var random_night_text =
-						texts_night[
-							Math.floor(Math.random() * texts_night.length)
-						];
+				var text = document.getElementById("text");
+				text.innerHTML = random_night_text;
+				text.style.color = "var(--accent)"; // icon matching
 
-					var text = document.getElementById("text");
-					text.innerHTML = random_night_text;
-					text.style.color = "var(--accent)"; // icon matching
+				document.body.style.backgroundColor = "var(--dark-background)";
+				document.body.style.color = "var(--dark-background-font)";
 
-					document.body.style.backgroundColor = "var(--dark-background)";
-					document.body.style.color = "var(--dark-background-font)";
-					
-				} else {
-					console.log("Looks like a day."); // debug
+			} else {
+				console.log("Looks like a day ☀️"); // debug
 
-					var texts_day = [
-						"Don't stop when you're bored!<br />Stop when you are<span style='text-transform: uppercase; font-weight: 700;'> done</span> ✅",
-						"You have better things to do 🙃",
-						"No ⛔",
-						"Are you sure you did everything? 🤔",
-						"Finish it now and have some fun time later!",
-						"You can do it 💪🏼",
-						"Who, if not you?",
-						"You're sooo close!",
-						"Almost there 🎯",
-						"You turned this on for a reason 🙃"
-					];
+				var texts_day = [
+					"Don't stop when you're bored!<br />Stop when you are<span style='text-transform: uppercase; font-weight: 700;'> <u>done</u></span> ✅",
+					"You have better things to do 🙃",
+					"No ⛔",
+					"Are you sure you did everything? 🤔",
+					"Finish it now and have some fun time later!",
+					"You can do it 💪🏼",
+					"Who, if not <u>you</u>?",
+					"You're sooo close!",
+					"Almost there 🎯",
+					"You turned this on for a reason 🙃"
+				];
 
-					var random_day_text =
-						texts_day[Math.floor(Math.random() * texts_day.length)];
+				var random_day_text =
+					texts_day[Math.floor(Math.random() * texts_day.length)];
 
-					var text = document.getElementById("text");
-					text.innerHTML = random_day_text;
+				var text = document.getElementById("text");
+				text.innerHTML = random_day_text;
 
-					document.body.style.backgroundColor = "var(--light-background)";
-					document.body.style.color = "var(--light-background-font)";
+				document.body.style.backgroundColor = "var(--light-background)";
+				document.body.style.color = "var(--light-background-font)";
 
-				}
-			};
-		</script>
-	</body>
+			}
+		};
+	</script>
+
+</body>
+
 </html>

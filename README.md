@@ -13,14 +13,15 @@ That's it 🛡
 
 ## Release History
 
+- 0.7: Changed font; changed icon; some tweaks for RWD.
 - 0.6: Background will be light during the day and dark after 21:00.
--   0.5.2: Added a few new quotes.
--   0.5.1: RWD fixes for `min-width: 1600px`.
--   0.5: Added new texts. Text at night will be in red.
--   0.4: Added different text when it's late and now during normal hours text is selected randomly.
--   0.3: RWD fixes.
--   0.2: Changed text.
--   0.1: Launch.
+- 0.5.2: Added a few new quotes.
+- 0.5.1: RWD fixes for `min-width: 1600px`.
+- 0.5: Added new texts. Text at night will be in red.
+- 0.4: Added different text when it's late and now during normal hours text is selected randomly.
+- 0.3: RWD fixes.
+- 0.2: Changed text.
+- 0.1: Launch.
 
 ## Versioning
 

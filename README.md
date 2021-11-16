@@ -7,7 +7,7 @@
 ## How to use
 
 1. If you're using Chromium-based browser (Google Chrome, Brave, Opera, Vivaldi, Microsoft Edge, etc) download [this open source Block Site extension](https://chrome.google.com/webstore/detail/block-site/lebiggkccaodkkmjeimmbogdedcpnmfb) or [this alternative](https://chrome.google.com/webstore/detail/block-site-website-blocke/eiimnmioipafcokbfikbljfdeojpcgbh).
-2. Go to extension's settings and use [this URL](https://qubkon.github.io/blocker/blocker.html) as a custom redirect.
+2. Go to extension's settings and use [this URL](https://vardecab.github.io/blocker/blocker.html) as a custom redirect.
 
 That's it 🛡
 

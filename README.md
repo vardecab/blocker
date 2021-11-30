@@ -1,13 +1,20 @@
 # Blocker
 
+![](https://img.shields.io/uptimerobot/status/m789902285-b45150086e5f4af74538608a)
+![](https://img.shields.io/badge/browser-Chromium%20%7C%20Firefox-blue)
+
 > A simple static website in HTML to use as custom redirect in block-site type of extensions for web browsers.
 
-![image](https://user-images.githubusercontent.com/6877391/49475426-7d01b400-f817-11e8-93ba-48976cf53322.png)
+Day mode:
+![](https://user-images.githubusercontent.com/6877391/144022312-80ee318c-c9c5-4fc6-9863-c44f703de8cf.png)
+Night mode:
+![](https://user-images.githubusercontent.com/6877391/144024897-fdf0222e-bfe9-4a4d-b8da-b7fd531f7f1e.png)
 
 ## How to use
 
-1. If you're using Chromium-based browser (Google Chrome, Brave, Opera, Vivaldi, Microsoft Edge, etc) download [this open source Block Site extension](https://chrome.google.com/webstore/detail/block-site/lebiggkccaodkkmjeimmbogdedcpnmfb) or [this alternative](https://chrome.google.com/webstore/detail/block-site-website-blocke/eiimnmioipafcokbfikbljfdeojpcgbh).
-2. Go to extension's settings and use [this URL](https://vardecab.github.io/blocker/blocker.html) as a custom redirect.
+- If you're using Chromium-based browser (Google Chrome, Brave, Opera, Vivaldi, Microsoft Edge, etc.) download [this open source Block Site extension](https://chrome.google.com/webstore/detail/block-site/lebiggkccaodkkmjeimmbogdedcpnmfb) or [this alternative](https://chrome.google.com/webstore/detail/block-site-website-blocke/eiimnmioipafcokbfikbljfdeojpcgbh), or [this one](https://chrome.google.com/webstore/detail/block-site/nkedbnokglppcmiencngilkkhhnpcfjb).
+- If you're using Firefox, download [this extension](https://addons.mozilla.org/en-US/firefox/addon/block-website/) or [this one](https://addons.mozilla.org/en-US/firefox/addon/blocksite/).
+- Go to extension's settings and use [this URL](https://vardecab.github.io/blocker/blocker.html) as a custom redirect.
 
 That's it 🛡
 
@@ -30,4 +37,8 @@ Using [SemVer](http://semver.org/).
 
 ## License
 
-GNU General Public License v3.0, see [LICENSE.md](https://github.com/vardecab/blocker/blob/master/LICENSE).
+![](https://img.shields.io/github/license/vardecab/blocker)
+
+## Contributing
+
+![](https://img.shields.io/github/issues/vardecab/blocker)

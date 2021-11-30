@@ -39,6 +39,10 @@ Using [SemVer](http://semver.org/).
 
 ![](https://img.shields.io/github/license/vardecab/blocker)
 
+## Acknowledgements
+
+- Icons from [Flaticon](https://www.flaticon.com/)
+
 ## Contributing
 
 ![](https://img.shields.io/github/issues/vardecab/blocker)

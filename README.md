@@ -1,6 +1,7 @@
 # Blocker
 
 ![Actively Maintained](https://img.shields.io/badge/Maintenance%20Level-Actively%20Maintained-green.svg)
+<br>
 ![](https://img.shields.io/uptimerobot/status/m789902285-b45150086e5f4af74538608a)
 ![](https://img.shields.io/badge/browser-Chromium%20%7C%20Firefox-blue)
 
